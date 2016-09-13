@@ -36,7 +36,6 @@ myVariable = 'myValue2'
 import myModule
 print(myModule.myFunction())
 print(myModule.myVariable)
-
 ```
 
 Based on [Ex40][1] 
@@ -46,20 +45,18 @@ Based on [Ex40][1]
 - Methods: actions to **do** on / to / with an object of this class
 - Attribues: the properties / variables / data associated with an object of this class
 - `__init__` 
-  - can take multiple arguments, or just the automatic one, traditionally called 'self'.
-  - a ['magic' method][2] that initializes the class, which is called when a new object is Instantiated (created)
-  - sometimes called a 'dunder' for the double-underscores
-  - other 'dunders' are `__iter__`, `__call__`, `__new__`, `__del__`, and more.
+  - Can take multiple arguments, or just the automatic one, traditionally called 'self'.
+  - A ['magic' method][2] that initializes the class, which is called when a new object is Instantiated (created)
+  - Sometimes called a 'dunder' for the double-underscores
+  - Other 'dunders' are `__iter__`, `__call__`, `__new__`, `__del__`, and more.
 
 ```python
-
 class myClass(object):
     def __init__(self, myArgument = 'myDefault'):
         self.myAttribute = myArgument
 
     def myMethod(self):
         return 'myReturnValue3'
-
 ```
 
 See the [Python Docs][3]
@@ -100,10 +97,9 @@ myObject.myAttribute
 ### Inheritance
 
 - Specific object "is a" generic object. (Apple is a fruit)
-- Child *inherits* **ALL** Methods and Attributes from all (1, 2 or more) parents and of *their* parents
+- Child *inherits* **ALL** Methods and Attributes from all (1, 2 or more) parents and from *their* parents
 
 ```python
-
 class Animal(object):
     self.kingdom = 'Animalia'
 
@@ -144,7 +140,6 @@ print(hercules.has_stripes)
 
 # Access overloaded method of Liger Class
 hercules.says()
-
 ```
 
 ### Composition
@@ -155,7 +150,6 @@ hercules.says()
 - Before we dive in, consider `sample/core.py` a module that someone gives you:
 
 ```python
-
 ### Start sample/core.py
 class Song(object):
 
@@ -193,7 +187,6 @@ print(bulls_on_parade.get_character_count())
 
 bulls_on_parade.make_upper()
 bulls_on_parade.sing_me_a_song()
-
 ```
 
 - We want to extend the features of that Class without touching the code given to us.
@@ -204,7 +197,6 @@ bulls_on_parade.sing_me_a_song()
 - So here is our new Class, saved in the `mine.py` module, which creates a Song Object as its Attribute, using Composition:
 
 ```python
-
 ### Start mine.py
 import sample.core
 
