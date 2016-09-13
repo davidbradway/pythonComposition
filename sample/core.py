@@ -20,7 +20,7 @@ class Song(object):
 
     def sing_me_a_song(self):
         for line in self.lyrics:
-            print line
+            print(line)
 
     def get_character_count(self):
         character_count = 0
