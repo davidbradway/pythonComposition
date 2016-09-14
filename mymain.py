@@ -36,6 +36,7 @@ def main():
     # Try the method which was not passed through
     try:
         happy_bday.make_upper()
+    # NOTE: new syntax!
     except AttributeError as err:
         print("Didn't pass that method through in new class: {0}".format(err))
 
