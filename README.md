@@ -101,27 +101,34 @@ myObject.myAttribute
 
 ```python
 class Animal(object):
-    self.kingdom = 'Animalia'
+    def __init__(self):
+        self.kingdom = 'Animalia'
 
 class Lion(Animal):
-    self.genus = 'Panthera'
-    self.species = 'Tigris'
-    self.has_mane = True
+    def __init__(self):
+        super(Lion, self).__init__()
+        self.genus = 'Panthera'
+        self.species = 'Tigris'
+        self.has_mane = True
 
     def says(self):
         print('Roar')
 
 class Tiger(Animal):
-    self.genus = 'Panthera'
-    self.species = 'Leo'
-    self.has_stripes = True
+    def __init__(self):
+        super(Tiger, self).__init__()
+        self.genus = 'Panthera'
+        self.species = 'Leo'
+        self.has_stripes = True
 
     def says(self):
         print('Grr')
 
 # Multiple Inheritance!
 class Liger(Lion, Tiger):
-    self.species = 'Leo x Tigris'
+    def __init__(self):
+        super(Liger, self).__init__()
+        self.species = 'Leo x Tigris'
 
     def says(self):
         print('Grroar?')
