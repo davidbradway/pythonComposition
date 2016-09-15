@@ -52,10 +52,24 @@ Based on [Ex40][1]
 
 ```python
 class myClass(object):
+    """This is a myClass class.
+
+    __init__ sets the myAttribute attribute.
+
+    Attributes:
+        myAttribute (str): string attribute
+
+    """
+
     def __init__(self, myArgument = 'myDefault'):
         self.myAttribute = myArgument
 
     def myMethod(self):
+        """ returns a literal string value
+ 
+        :return: liteal string [str]
+        """
+
         return 'myReturnValue3'
 ```
 
@@ -101,10 +115,27 @@ myObject.myAttribute
 
 ```python
 class Animal(object):
+    """This is an Animal class.
+
+    __init__ sets the kingdom attribute.
+
+    Attributes:
+        kingdom (str): a string indicating the kingdom of the animal.
+    """
+
     def __init__(self):
         self.kingdom = 'Animalia'
 
 class Lion(Animal):
+    """This is a Lion class.
+
+    __init__ sets the attributes
+
+    Attributes:
+        genus (str): a string indicating the genus
+        species (str): a string indicating the species
+        has_mane (bool): a boolean indicating if it has a mane
+    """
     def __init__(self):
         super(Lion, self).__init__()
         self.genus = 'Panthera'
@@ -112,9 +143,21 @@ class Lion(Animal):
         self.has_mane = True
 
     def says(self):
+        """ prints what it says
+        """
+
         print('Roar')
 
 class Tiger(Animal):
+    """This is a Tiger class.
+
+    __init__ sets the attributes
+
+    Attributes:
+        genus (str): a string indicating the genus
+        species (str): a string indicating the species
+        has_stripes (bool): a boolean indicating if it has stripes
+    """
     def __init__(self):
         super(Tiger, self).__init__()
         self.genus = 'Panthera'
@@ -122,15 +165,28 @@ class Tiger(Animal):
         self.has_stripes = True
 
     def says(self):
+        """ prints what it says
+        """
+
         print('Grr')
 
 # Multiple Inheritance!
 class Liger(Lion, Tiger):
+    """This is a Liger class.
+
+    __init__ sets the attributes
+
+    Attributes:
+        species (str): a string indicating the species
+    """
     def __init__(self):
         super(Liger, self).__init__()
         self.species = 'Leo x Tigris'
 
     def says(self):
+        """ prints what it says
+        """
+
         print('Grroar?')
 
 hercules = Liger()
@@ -158,7 +214,22 @@ hercules.says()
 
 ```python
 ### Start sample/core.py
+# -*- coding: utf-8 -*-
+"""Song module
+
+This module demonstrates a given class
+"""
+
+
 class Song(object):
+    """This is a Song class.
+
+    __init__ sets the lyrics attribute.
+
+    Attributes:
+        lyrics (list): a list of strings indicating lines of lyrics of the song.
+
+    """
 
     def __init__(self, lyrics):
         self.lyrics = lyrics
@@ -216,17 +287,33 @@ bulls_on_parade.sing_me_a_song()
 import sample.core
 
 class mySong(object):
+    """This is a mySong class.
+
+    __init__ sets the song attribute.
+
+    Attributes:
+        song (Song): a song of Class Song from the sample.core module
+
+    """
+
     def __init__(self, lyrics):
         self.song = sample.core.Song(lyrics)
 
     # Redefine this method, adding exclamation points to each line!
     def sing_me_a_song(self):
+        """ print song lyrics
+        """
         for line in self.song.lyrics:
             print(line+"!")
 
     # Pass this method through unchanged
     def get_character_count(self):
+        """ count characters in lyrics
+
+        :return: character count [int]
+        """
         return self.song.get_character_count()
+
 ### End mine.py
 ```
 
