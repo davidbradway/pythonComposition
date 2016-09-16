@@ -1,5 +1,7 @@
 # Python Class Class
 
+[![Binder](http://mybinder.org/badge.svg)](http://mybinder.org:/repo/davidbradway/pythoncomposition)
+
 ## Object oriented programming in Python, Outline (2016-09-22)
 
 - Relate Python Classes to Modules
